@@ -5,6 +5,6 @@ Learning Time-Invariant Representations for Individual Neurons from Population D
 
 Lu Mi*, Trung Le*, Tianxing He, Eli Shlizerman, Uygar Sümbül
 
-![intro](https://github.com/lumimim/NeuPRINT/assets/41974416/0e81a233-74ee-4a3d-9991-b44563800114)
+![intro_16](https://github.com/lumimim/NeuPRINT/assets/41974416/48e72abb-13af-42cf-87ac-145700024755)
 
-Coming soon
+Coming soon...
