@@ -7,4 +7,3 @@ Lu Mi*, Trung Le*, Tianxing He, Eli Shlizerman, Uygar Sümbül
 
 ![intro_16](https://github.com/lumimim/NeuPRINT/assets/41974416/48e72abb-13af-42cf-87ac-145700024755)
 
-Coming soon...
