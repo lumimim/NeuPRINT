@@ -8,7 +8,7 @@ Lu Mi*, Trung Le*, Tianxing He, Eli Shlizerman, Uygar Sümbül
 ![intro_16](https://github.com/lumimim/NeuPRINT/assets/41974416/48e72abb-13af-42cf-87ac-145700024755)
 
 ## Environment Setup
-Run
+Assuming you have Python 3.8+ and Miniconda installed, run the following to set up the environment with necessary dependencies:
 ```
 conda env create -f environment.yml
 ```
