@@ -93,8 +93,8 @@ for i in range(len(date_exp_all)):
     # date_exp = 'SB025/2019-10-07/'
     # input_setting = 'Drifting Gratings/01/'
     # input_setting = 'Natural Scenes/01/'
-    input_setting = 'Natural Scenes/02/'
-    # input_setting = 'Blank/01/'
+    # input_setting = 'Natural Scenes/02/'
+    input_setting = 'Blank/01/'
     activity_norm, activity_population, frame_times, unique_ids, neuron_types, neuron_pos = load_data_session(directory, date_exp, input_setting, session_normalization = False)
     data_all_sessions.append({'activity_norm': activity_norm,
                             'activity_population': activity_population, 
