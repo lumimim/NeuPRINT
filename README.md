@@ -1,5 +1,5 @@
 # NeuPRINT
-Official implementation of Neuronal Time-Invariant Representations (NeuPRINT), NeurIPS 2023
+Official implementation of Neuronal Time-Invariant Representations (NeuPRINT).
 
 Learning Time-Invariant Representations for Individual Neurons from Population Dynamics. NeurIPS 2023
 
