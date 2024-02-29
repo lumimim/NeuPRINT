@@ -18,3 +18,31 @@ conda env create -f environment.yml
 ```
 python main.py --exp-tag neuprint_train
 ```
+
+## Citations
+If you find our code helpful, please cite our paper:
+
+```
+@article{mi2024learning,
+  title={Learning Time-Invariant Representations for Individual Neurons from Population Dynamics},
+  author={Mi, Lu and Le, Trung and He, Tianxing and Shlizerman, Eli and S{\"u}mb{\"u}l, Uygar},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+```
+If you use the dataset, please cite this paper:
+
+```
+@article{bugeon2022transcriptomic,
+  title={A transcriptomic axis predicts state modulation of cortical interneurons},
+  author={Bugeon, Stephane and Duffield, Joshua and Dipoppa, Mario and Ritoux, Anne and Prankerd, Isabelle and Nicoloutsopoulos, Dimitris and Orme, David and Shinn, Maxwell and Peng, Han and Forrest, Hamish and others},
+  journal={Nature},
+  volume={607},
+  number={7918},
+  pages={330--338},
+  year={2022},
+  publisher={Nature Publishing Group UK London}
+}
+```
+
