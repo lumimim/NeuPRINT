@@ -1,4 +1,4 @@
-
+import subprocess as sp
 
 def get_gpu_memory():
     output_to_list = lambda x: x.decode('ascii').split('\n')[:-1]
