@@ -10,6 +10,7 @@ class Activity_All_Sessions_Dataset(Dataset):
         self.record_unique_ids = record_unique_ids
         self.device = device
         self.train_val_dataset_ids = train_val_dataset_ids
+        self.test_dataset_ids = test_dataset_ids
         self.num_dataset = len(self.data)
         self.num_batch = num_batch
         self.train_time_steps_frac = train_time_steps_frac

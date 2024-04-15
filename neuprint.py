@@ -9,6 +9,7 @@ from loss_function import logLikelihoodGaussian, logLikelihoodPoisson, mse_loss
 from classification import post_hoc_subclass_classification
 from label_generation import record_id_subclass_label_generation
 from torch.nn.parameter import Parameter
+from torch.optim.lr_scheduler import StepLR
 
 class time_permutation_invariant_representation(torch.nn.Module):
     def __init__(self, max_neuron_dim, embedding_dim):

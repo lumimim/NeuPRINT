@@ -9,8 +9,6 @@ import pandas as pd
 import logging
 import torch
 import gc
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.decomposition import PCA
 import random
 torch.manual_seed(0)
 random.seed(0)
@@ -25,11 +23,9 @@ from label_generation import record_id_subclass_label_generation
 import argparse
 import datetime
 from pathlib import Path
-import pdb
 
 import subprocess as sp
 from threading import Thread , Timer
-import sched, time
 now = datetime.datetime.now().strftime("%b%d_%H-%M-%S")
 
 def get_parser():
