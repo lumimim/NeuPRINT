@@ -1,6 +1,9 @@
 import torch
 import numpy as np
 from classifiers import linear_classifier, mlp_classifier, mlp_classifier6
+from sklearn.neighbors import KNeighborsClassifier
+from torch.optim.lr_scheduler import StepLR
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 def post_hoc_subclass_classification(
     class_all_sessions,

@@ -2,7 +2,7 @@ import numpy as np
 from plot_func import plot_histogram
 from data_split import split_train_valid_test, extract_train_with_valid_test
 
-def record_id_subclass_label_generation(data_all_sessions, test_dataset_ids, train_neurons_frac = 0.8, val_neurons_frac = 0.1):
+def record_id_subclass_label_generation(data_all_sessions, test_dataset_ids, train_neurons_frac = 0.8):
     record_neuron_subclasses_all_sessions = []
     record_unique_neuron_ids_all_sessions = []
     neuron_EI_class_all_sessions = []

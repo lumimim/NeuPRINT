@@ -32,8 +32,6 @@ import pdb
 import subprocess as sp
 from threading import Thread , Timer
 import sched, time
-
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 now = datetime.datetime.now().strftime("%b%d_%H-%M-%S")
 
 def get_parser():
@@ -85,12 +83,11 @@ date_exp_all  = ['SB025/2019-10-07/',
                  'SB030/2020-01-08/',
                  'SB030/2020-01-10/',
                  'SB030/2020-01-28/']
-train_val_dataset_ids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 15, 16]
-test_dataset_ids = [9, 10, 11, 12, 13]
+train_val_dataset_ids = [0, 1, 2, 3, 4]
+test_dataset_ids = [5]
 
 for i in range(len(date_exp_all)):
     date_exp = date_exp_all[i]
-    # date_exp = 'SB025/2019-10-07/'
     # input_setting = 'Drifting Gratings/01/'
     # input_setting = 'Natural Scenes/01/'
     # input_setting = 'Natural Scenes/02/'
@@ -147,8 +144,6 @@ for dataset_id in range(len(data_all_sessions)):
             F_neighbor[:, j, 1] = np.std(activity_norm[:, np.asarray(neuron_neighbors[j])], axis = 1)
     data_all_sessions[dataset_id]['activity_neighbor'] = F_neighbor
 
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-
 from warnings import simplefilter
 simplefilter(action='ignore', category=FutureWarning)
 
@@ -191,7 +186,7 @@ embedding_dim = hparams_dict['embedding_dim']
 output_distribution = hparams_dict['output_distribution']
 num_z_optimize_epochs = hparams_dict['num_z_optimize_epochs']
 post_hoc_eval_epoch_freq = hparams_dict['post_hoc_eval_epoch_freq']
-exp_name = f'train_val_mice_split_drift_grating_data_F_z_{recon_model}_loss_{output_distribution}_layer_{layer_dim}_embedding_{embedding_dim}_z_epoch_{num_z_optimize_epochs}_eval_freq_{post_hoc_eval_epoch_freq}_population_neighbor_ckpt_large_mlp_all_mouses'
+exp_name = f'train_val_mice_split_blank_data_F_z_{recon_model}_loss_{output_distribution}_layer_{layer_dim}_embedding_{embedding_dim}_z_epoch_{num_z_optimize_epochs}_eval_freq_{post_hoc_eval_epoch_freq}_population_neighbor_ckpt_large_mlp_all_mouses'
 
 tensorboard_dir = '../../../tensorboard/'
 ckpt_dir = '../../../checkpoints/' + exp_name + '/'
