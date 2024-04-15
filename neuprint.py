@@ -10,6 +10,7 @@ from classification import post_hoc_subclass_classification
 from label_generation import record_id_subclass_label_generation
 from torch.nn.parameter import Parameter
 from torch.optim.lr_scheduler import StepLR
+import os
 
 class time_permutation_invariant_representation(torch.nn.Module):
     def __init__(self, max_neuron_dim, embedding_dim):
@@ -26,6 +27,7 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
     test_dataset_ids = None,
     logging = None,
     writer = None,
+    ckpt_dir = None,
     population_keys = ['running_speed', 'eye_size', 'frame_states', 'mean_activity','std_activity'], 
     use_neighbor = False,
     output_distribution = 'mse', 

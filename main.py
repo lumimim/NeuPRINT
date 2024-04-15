@@ -199,6 +199,7 @@ outputs = eval_single_neuron_time_invariant_permutation_invariant_recon_classfie
           test_dataset_ids = test_dataset_ids,
           logging = logging,
           writer = writer,
+          ckpt_dir =  ckpt_dir,
           **hparams_dict
           )
 print(outputs['metrics']['EI_train_mlp'])
