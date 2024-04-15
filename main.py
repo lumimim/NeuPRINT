@@ -156,7 +156,7 @@ hparams_dict = {
           'num_batch': 100,
           'batch_size': 2,
           'record_frac': 0.9,
-          'post_hoc_eval_epoch_freq': 20,
+          'post_hoc_eval_epoch_freq': 50,
           'num_sample_neurons': 512,
           'num_epochs': 400,
           'num_post_hoc_epochs': 5000, # default 5000
