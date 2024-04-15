@@ -377,6 +377,7 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
                                     class_data = class_all_sessions,
                                     train_val_dataset_ids = train_val_dataset_ids,
                                     test_dataset_ids = test_dataset_ids,
+                                    logging = logging,
                                     record_unique_ids_all_sessions = record_unique_ids_all_sessions,
                                     recon_model = recon_model,
                                     is_posthoc = True,

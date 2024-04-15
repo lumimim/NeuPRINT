@@ -8,8 +8,6 @@ from multiprocessing import Pool
 import pandas as pd
 import logging
 import torch
-from torch.nn.parameter import Parameter
-from torch.optim.lr_scheduler import StepLR
 import gc
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.decomposition import PCA
@@ -83,8 +81,8 @@ date_exp_all  = ['SB025/2019-10-07/',
                  'SB030/2020-01-08/',
                  'SB030/2020-01-10/',
                  'SB030/2020-01-28/']
-train_val_dataset_ids = [0, 1, 2, 3, 4]
-test_dataset_ids = [5]
+train_val_dataset_ids = [0, 1, 2, 3, 4, 6, 7, 9, 10, 11, 12, 14, 15]
+test_dataset_ids = [5, 8, 13, 16]
 
 for i in range(len(date_exp_all)):
     date_exp = date_exp_all[i]
