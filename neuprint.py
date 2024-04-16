@@ -75,10 +75,7 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
     context_forward = -1,
     attend_to_self = True,
     ckpt_path = None,
-    use_ckpt_hparams = True,
     post_hoc_only = False):
-  
-    hparams_dict = locals()
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'; print('Using device: %s'%device)
     
@@ -196,9 +193,6 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
         optimizer.load_state_dict(ckpt_dict['optimizer_state'])
         if lr_scheduler:
             scheduler.load_state_dict(ckpt_dict['lr_scheduler_state'])
-        if use_ckpt_hparams:
-            hparams_dict = ckpt_dict['hparams_dict']
-            print('hparams_dict replaced by saved checkpoint')
         print(ckpt_dict['extra_states'])
 
     losses = [] if ckpt_path is None else ckpt_dict['extra_states']['losses']
@@ -424,7 +418,7 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
                 train_zs = []
                 valid_zs = []
                 test_zs = []
-                for kf_i in range(kfold):
+                for _ in range(kfold):
                     outputs = post_hoc_subclass_classification(
                         class_all_sessions,
                         pred_train_z_ts,
@@ -502,7 +496,6 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
                         'model_state': recon_model.state_dict(),
                         'optimizer_state': optimizer.state_dict(),
                         'lr_scheduler_state': None if not lr_scheduler else scheduler.state_dict(),
-                        'hparams_dict': hparams_dict,
                         'best_epoch_subclass_train_acc': best_epoch_subclass_train_acc,
                         'best_subclass_valid_acc': best_subclass_valid_acc,
                         'best_epoch_subclass_test_acc': best_epoch_subclass_test_acc,
@@ -548,7 +541,7 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
                 train_zs = []
                 valid_zs = []
                 test_zs = []
-                for kf_i in range(kfold):
+                for _ in range(kfold):
                     outputs = post_hoc_subclass_classification(
                         class_all_sessions,
                         pred_train_z_ts,
@@ -628,7 +621,6 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
                         'model_state': recon_model.state_dict(),
                         'optimizer_state': optimizer.state_dict(),
                         'lr_scheduler_state': None if not lr_scheduler else scheduler.state_dict(),
-                        'hparams_dict': hparams_dict,
                         'best_epoch_subclass_train_acc': best_epoch_subclass_train_acc,
                         'best_subclass_valid_acc': best_subclass_valid_acc,
                         'best_epoch_subclass_test_acc': best_epoch_subclass_test_acc,
