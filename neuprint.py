@@ -66,7 +66,6 @@ def eval_single_neuron_time_invariant_permutation_invariant_recon_classfier(
     knn_k = 5,
     k = 1,
     kfold = 5,
-    w_clf = 1,
     w_recon = 1,
     use_weighted_ce_loss = False,
     full_context = True,
