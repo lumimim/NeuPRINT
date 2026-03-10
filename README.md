@@ -18,13 +18,11 @@ conda env create -f environment.yml
 
 ## Run Experiments
 
-In the released github repo, we listed the most challenging setting with **cross-animal** training/test split, where our dynamical model f is trained on three mice SB25, SB26, SB30, and for the held-out mouse SB28 for evaluation, we only finetune \phi with f fixed, and the subclass classifier is only trained on SB25/SB26/SB30.
- 
-In our paper where we reported on Table 1 from a **single animal** (SB25) with train/val neuron split.
-Table 2 refers to **multi-animal** setting (different from the **cross-animal** setting), where all mouse are included during the training, with some neurons randomly selected are heldout for evaluations.
+Multiple data split and evaluation mode you can test with this repo with modification on the main.py file:
 
-Please check our description “We first evaluate our approach on one animal (SB025) across 6 sessions. The recordings from this animal include 2481 neurons in total. We then extend our analysis on functional recordings from 4 mice (SB025, SB026, SB028, SB030) across 17 sessions.”
-“We introduce a downstream classification task to predict the subclass label with supervised learning, where the neurons with subclass labels from all sessions are randomly split into train, validation and test neurons with a proportion of 80% : 10% : 10%.”
+1. **Single animal**: In our paper where we reported on Table 1 from a **single animal** (SB25) with train/val/test neuron split. Please check our description “We first evaluate our approach on one animal (SB025) across 6 sessions. The recordings from this animal include 2481 neurons in total.
+2. **Multi-animal**: Table 2 refers to **multi-animal** setting, where all mice are included during the training, with some neurons are heldout for evaluations. Please check the description "We then extend our analysis on functional recordings from 4 mice (SB025, SB026, SB028, SB030) across 17 sessions." "We introduce a downstream classification task to predict the subclass label with supervised learning, where the neurons with subclass labels from all sessions are randomly split into train, validation and test neurons with a proportion of 80% : 10% : 10%."
+3. **Cross-animal**: The most challenging setting with **cross-animal** training/test split, where our dynamical model f is trained on three mice SB25, SB26, SB30, and for the held-out mouse SB28 for evaluation, we only finetune \phi with f fixed, and the subclass classifier is only trained on SB25/SB26/SB30.
 
 ```
 python main.py --exp-tag neuprint_train
